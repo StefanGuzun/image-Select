@@ -1,0 +1,28 @@
+.box{
+    background-color: black;
+    height: 300px;
+    width: 100%;
+}
+.input{
+    width: 75%;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 17px;
+}
+
+.featuresContainer{
+    border: black solid 1px;
+    height: 133px;
+    overflow-y:scroll;
+}
+.buttonStyle{
+    height: 50px;
+    width: 40%;
+    border: black solid 2px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
