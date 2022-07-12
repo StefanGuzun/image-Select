@@ -1,7 +1,7 @@
 import "./Dialog.css"
 
 const RealNotReal = () => {
-  const features = ["Background", "Eyes", "Nose", "Hair", "Skin", "Accessories"]
+  const features = ["Background", "Eyes", "Nose", "Hair", "Mouth", "Ears", "Jewellery"]
   return (
       <div style={{margin:"0 330px", border:"black solid "}}>
         <h3 style={{display:"flex", justifyContent:"center", marginBottom:"68px"}}>Why</h3>
