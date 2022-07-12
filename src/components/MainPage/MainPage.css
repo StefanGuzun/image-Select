@@ -1,0 +1,73 @@
+.MainContainer {
+    border: 3px solid black;
+    height: 2375px;
+    width: 1475px;
+}
+
+.UpperContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    height: 50%;
+    width: 100%;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.PhotosContainer {
+    margin-top: 60px;
+    border: 3px solid black;
+
+    height: 70%;
+    width: 80%;
+}
+
+.Buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 15%;
+}
+
+.Real {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    height: 60%;
+    width: 48%;
+    font-size: 50px;
+    margin-right: 5px;
+}
+
+.NotReal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    height: 60%;
+    width: 48%;
+    font-size: 50px;
+}
+
+.LowerContainer {
+    height: 50%;
+    width: 100%;
+}
+
+.GenerateReport {
+    position: relative;
+    border: 3px solid black;
+    top: 30px;
+    left: 1120px;
+    height: 150px;
+    width: 320px;
+    text-align: center;
+    font-size: 50px;
+}
