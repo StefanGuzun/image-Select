@@ -10,7 +10,7 @@
 }
 
 .titles {
-    margin-left: 85px;
+    margin-left: 10px;
 }
 
 .rp__clue {
@@ -27,15 +27,15 @@
 }
 
 .rp__imgs__item {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background-color: azure;
     border: 2px solid black;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .rp__footer {
-    width: 100%;
+    width: 650px;
     height: 80px;
     border-top: 2px solid black;
     display: flex;
@@ -54,4 +54,10 @@
     text-decoration: none;
     color: black;
     margin-top: 10px;
+}
+.report-page{
+    border: 3px solid black;
+    height: 1000px;
+    width: 650px;
+    margin-left: 300px;
 }
