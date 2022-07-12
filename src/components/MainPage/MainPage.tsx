@@ -1,4 +1,5 @@
 import React from "react"
+import "./MainPage.css"
 
 const MainPage = () => {
   return (
@@ -17,7 +18,12 @@ const MainPage = () => {
         </div>
       </div>
       <div className="LowerContainer">
+          <div className="GenerateReportContainer">
         <div className="GenerateReport">Generate report</div>
+          </div>
+          <div className="NotRealPhotoStorage">
+
+          </div>
       </div>
     </div>
   )
