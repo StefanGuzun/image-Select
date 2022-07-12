@@ -12,7 +12,7 @@ export default function ReportPage() {
       <div className='rp__detected-unreal'>
 
           <div className='rp__clue'>
-            <h2 id='titles'>Name</h2>
+            <h2 className='titles'>Name</h2>
             <div className='rp__imgs'>
               <div className='rp__imgs__item'></div>
               <div className='rp__imgs__item'></div>
@@ -22,7 +22,7 @@ export default function ReportPage() {
           </div>
 
           <div className='rp__clue'>
-            <h2  id='titles'>Name</h2>
+            <h2 className='titles'>Name</h2>
             <div className='rp__imgs'>
               <div className='rp__imgs__item'></div>
               <div className='rp__imgs__item'></div>
@@ -30,7 +30,7 @@ export default function ReportPage() {
           </div>
 
           <div className='rp__clue'>
-            <h2 id='titles'>Name</h2>
+            <h2 className='titles'>Name</h2>
             <div className='rp__imgs'>
               <div className='rp__imgs__item'></div>
               <div className='rp__imgs__item'></div>
