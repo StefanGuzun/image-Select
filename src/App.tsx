@@ -1,11 +1,10 @@
 import './App.css';
-import server from './API';
-import Server from './API';
+import Dialog from "./components/Dialog/Dialog";
 
 function App() {
   return (
     <div className="App">
-      <Server/>
+      <Dialog/>
     </div>
   );
 }
