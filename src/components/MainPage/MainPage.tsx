@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./MainPage.css"
 
 const MainPage = () => {
@@ -19,7 +20,9 @@ const MainPage = () => {
       </div>
       <div className="LowerContainer">
           <div className="GenerateReportContainer">
-        <div className="GenerateReport">Generate report</div>
+            <Link to='/ReportPage'>
+              <div className="GenerateReport">Generate report</div>
+            </Link>
           </div>
           <div className="NotRealPhotoStorage">
 
