@@ -1,5 +1,4 @@
 .MainContainer {
-    justify-content: center;
     border: 3px solid black;
     height: 1000px;
     width: 650px;
@@ -74,7 +73,11 @@
     height: 100px;
     width: 200px;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    outline: none;
+    color: black;
+} a:link {
+    text-decoration: none;
 }
 
 .NotRealPhotoStorage {
