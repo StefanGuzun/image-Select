@@ -4,45 +4,41 @@ import './ReportPage.css';
 
 export default function ReportPage() {
   return (
-    <div className='report-page'>
-      <div className='rp__header'>
-        <h1 className='titles'>Report</h1>
+    <div className='ReportPage'>
+      <div className='HeaderReportPage'>
+        <h1 className='ReportPageName'>Report</h1>
       </div>
 
-      <div className='rp__detected-unreal'>
-
-          <div className='rp__clue'>
-            <h2 className='titles'>Name</h2>
-            <div className='rp__imgs'>
-              <div className='rp__imgs__item'></div>
-              <div className='rp__imgs__item'></div>
-              <div className='rp__imgs__item'></div>
-              <div className='rp__imgs__item'></div>
+          <div className='Clue'>
+            <h2 className='ClueName'>Name</h2>
+            <div className='UnrealImages'>
+              <div className='UnrealImagesItem'></div>
+              <div className='UnrealImagesItem'></div>
+              <div className='UnrealImagesItem'></div>
+              <div className='UnrealImagesItem'></div>
             </div>
           </div>
 
-          <div className='rp__clue'>
-            <h2 className='titles'>Name</h2>
-            <div className='rp__imgs'>
-              <div className='rp__imgs__item'></div>
-              <div className='rp__imgs__item'></div>
+          <div className='Clue'>
+            <h2 className='ClueName'>Name</h2>
+            <div className='UnrealImages'>
+              <div className='UnrealImagesItem'></div>
+              <div className='UnrealImagesItem'></div>
             </div>
           </div>
 
-          <div className='rp__clue'>
-            <h2 className='titles'>Name</h2>
-            <div className='rp__imgs'>
-              <div className='rp__imgs__item'></div>
-              <div className='rp__imgs__item'></div>
-              <div className='rp__imgs__item'></div>
+          <div className='Clue'>
+            <h2 className='ClueName'>Name</h2>
+            <div className='UnrealImages'>
+              <div className='UnrealImagesItem'></div>
+              <div className='UnrealImagesItem'></div>
+              <div className='UnrealImagesItem'></div>
             </div>
           </div>
 
-      </div>
-
-        <div className='rp__footer'>
+        <div className='FooterReportPage'>
           <Link to='/'>
-            <button className='rp__add-more'>Add More</button>
+            <button className='AddMoreButton'>Add More</button>
           </Link>
         </div>
     </div>
