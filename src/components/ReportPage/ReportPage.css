@@ -1,32 +1,33 @@
-.rp__header {
+.ReportPage{
+    border: 3px solid black;
+    height: 1000px;
+    width: 650px;
+}
+
+.HeaderReportPage{
     width: 100%;
     height: 70px;
     border-bottom: 2px solid black;
 }
 
-.rp__detected-unreal {
-    height: auto;
-    margin-bottom: 130px;
+.ReportPageName, .ClueName {
+    margin-left: 35px;
 }
 
-.titles {
-    margin-left: 10px;
-}
-
-.rp__clue {
+.Clue {
     width: 100%;
     height: auto;
     margin-top: 50px;
 }
 
-.rp__imgs {
+.UnrealImages {
     width: 100%;
     height: auto;
     display: flex;
     margin-left: -15px;
 }
 
-.rp__imgs__item {
+.UnrealImagesItem {
     width: 100px;
     height: 100px;
     background-color: azure;
@@ -34,7 +35,7 @@
     margin-left: 50px;
 }
 
-.rp__footer {
+.FooterReportPage {
     width: 650px;
     height: 80px;
     border-top: 2px solid black;
@@ -45,7 +46,7 @@
     background-color: white;
 }
 
-.rp__add-more {
+.AddMoreButton {
     width: 150px;
     height: 60px;
     font-size: 20px;
