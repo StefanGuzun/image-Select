@@ -20,7 +20,7 @@ const MainPage = () => {
       <div className="UpperContainer">
         <div className="PhotosContainer">
         <TransformWrapper
-          initialScale={0.5}
+          initialScale={1}
         >
           <TransformComponent>
             <img className="Photos" src={APIComponent()} alt=""></img>
