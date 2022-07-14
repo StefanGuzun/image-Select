@@ -17,7 +17,7 @@ const MainPage = () => {
         </div>
         <div className="Buttons">
             <input type="button" className="Real"
-                   value="Real">
+                   value="Real" onClick={realImg}>
             </input>
             <input type="button" className="NotReal"
                    value="Not Real"
