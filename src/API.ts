@@ -1,16 +1,13 @@
-import axios from 'axios'
-import React from 'react'
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-export default function server() {
-axios.get("http://localhost:3000/api/v1/image")
-.then(res => res.data)
+const APIComponent = () => {
+    const [images, setImages] = useState <any>([])
+    useEffect(() => {
+        axios.get("http://localhost:3000/api/v1/image")
+        .then(res => setImages(res.config.url))
+        }, [])
+        return images
 }
 
-
-
-
-
-
-// axios
-//       .get
-//       .then(res => {
+export default APIComponent
