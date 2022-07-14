@@ -1,9 +1,7 @@
-import React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ReportPage from "./components/ReportPage/ReportPage";
 import MainPage from "./components/MainPage/MainPage";
-
 
 function App() {
     return (

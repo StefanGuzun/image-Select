@@ -1,19 +1,33 @@
+
+.pop-Up {
+    position: fixed;
+    width: 607px;
+    margin: 9vh auto 0;
+    background: rgb(102 129 155);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1.5px solid #cfd3d6;
+}
+
 .inputStyle{
     width: 75%;
     height: 40px;
     border-radius: 5px;
     border:  1.5px solid #cfd3d6;
-    background-color: #ffffff;
     font: small-caps 500 20px/1 sans-serif;
     font-size: medium;
 }::placeholder {
      color: #66819b;
-
  }
 
+.Why {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    color:#e3e1e2;
+}
 
 .featuresContainer{
-    border:  1.5px solid #cfd3d6;
     height: 123px;
     overflow-y:scroll;
     border-radius: 5px;
@@ -21,41 +35,17 @@
     color: #66819b;
     font: small-caps 500 20px/1 sans-serif;
     font-size: medium;
-
 }
+
 .buttonStyle{
     height: 50px;
     width: 40%;
     border:none ;
     margin: 5px 0;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #ffffff;
     color: #66819b;
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
     font: small-caps 500 20px/1 sans-serif;
 }
-.popup-box {
-    position: fixed;
-    background: #00000050;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 18%;
-}
-
-.wholeContent {
-    width: 60%;
-    height: auto;
-    max-height: 76vh;
-    margin: 9vh auto 0;
-    background: rgb(102 129 155);
-    border-radius: 15px;
-    padding: 20px;
-    border: 1px solid #999;
-}
-
-
