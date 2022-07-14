@@ -3,25 +3,7 @@
     height: 1000px;
     width: 650px;
     background-color: white;
-    border-radius: 15px;
     color: #43464b;
-
-}
-
-.HeaderReportPage{
-    width: 100%;
-    height: 70px;
-    border-bottom: 1.5px solid #cfd3d6;
-}
-
-.ReportPageName, .ClueName {
-    margin-left: 35px;
-}
-
-.Clue {
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
 }
 
 .UnrealImages {
@@ -48,7 +30,6 @@
     position: fixed;
     bottom: 0;
     background-color: #67829b;
-    border-radius: 0 0 15px 15px;
 
 }
 
@@ -68,10 +49,4 @@
     box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
     font: small-caps 500 20px/1 sans-serif;
     cursor: pointer;
-}
-.report-page{
-    border: 3px solid black;
-    height: 1000px;
-    width: 650px;
-    margin-left: 300px;
 }
