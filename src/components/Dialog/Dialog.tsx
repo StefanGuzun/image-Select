@@ -15,27 +15,26 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
      const handleSubmit = () => {
         reason.push(inputValue)
         console.log(reason);
-        console.log('inputValue :>> ', inputValue);                 
+        console.log('inputValue :>> ', inputValue);
     }
 
     console.log('inputValue :>> ', inputValue);
     console.log('reason :>> ', reason);
 
-    
-        
-    
+
+
+
     return (
-        <div className="wholeContent popup-box" style={{ border:"black solid "}}>
-            <span className="close-icon" onClick={props.handleClose}>x</span>
-            <h3 style={{display:"flex", justifyContent:"center", marginBottom:"68px"}}>Why</h3>
-                <div>Choose features
+        <div className="wholeContent popup-box" style={{ border:"1.5px solid #cfd3d6"}}>
+            <h3 style={{display:"flex", justifyContent:"center", marginTop:"0", color:"#e3e1e2"}}>Why</h3>
+                <div style={{color:"#e3e1e2"}}>Choose features
                     <ul className="featuresContainer">
                         {
-                            features.map((feature) => <li style={{listStyleType:"none"}}><div style={{display:"flex", alignItems:"center"}}><input type="checkbox" style={{height:"25px", width:"25px"}}/>{feature}</div></li>)
+                            features.map((feature) => <li style={{listStyleType:"none"}}><div style={{display:"flex", alignItems:"center"}}><input type="checkbox" style={{height:"25px", width:"25px",color:"black"}}/>{feature}</div></li>)
                         }
                     </ul>
                 </div>
-            <p style={{margin:"0 20px"}}>Other</p>
+            <p style={{margin:"0 20px", color:"#e3e1e2"}}>Other</p>
             <div style={{display:"flex",  justifyContent:"center"}}>
                 <input id="other" className="inputStyle" onChange={inputHandler} placeholder="Enter your own feature"/>
             </div>

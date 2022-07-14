@@ -1,7 +1,10 @@
 .MainContainer {
-    border: 3px solid black;
-    height: 1000px;
+    border:  1.5px solid #cfd3d6;
+    height: 100%;
     width: 650px;
+    background-color: #67829b;
+    border-radius: 15px;
+
 }
 
 .UpperContainer {
@@ -9,54 +12,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50%;
     width: 100%;
-    border: 0 solid black;
-    border-bottom-width: 3px;
+    border-bottom: 1.5px solid #cfd3d6;
 }
 
 .PhotosContainer {
-    margin-top: 60px;
-    border: 3px solid black;
-    height: 65%;
-    width: 80%;
+    margin-top: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+
 }
 
-.Buttons {
-    margin-top: 30px;
-    margin-bottom: 10px;
+.ButtonPosition {
+    margin: 20px 0;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     width: 80%;
-    height: 15%;
 }
 
-.Real {
+.ButtonStyle {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid black;
-    height: 60%;
+    background-color: #ced1dc;
+    color: #67829b;
+    height: 35px;
     width: 48%;
-    font-size: 30px;
-    margin-right: 5px;
-}
-
-.NotReal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid black;
-    height: 60%;
-    width: 48%;
-    font-size: 30px;
+    border: #999999;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+    font: small-caps 500 20px/1 sans-serif;
+    cursor: pointer;
 }
 
 .LowerContainer {
     height: 50%;
     width: 100%;
+
 }
 
 .GenerateReportContainer {
@@ -64,18 +57,26 @@
     justify-content: flex-end;
     width: 100%;
     height: 130px;
+    background-color: #ffffff;
 }
 
 .GenerateReport {
     margin-top: 20px;
     margin-right: 20px;
-    border: 3px solid black;
-    height: 100px;
+    height: 60px;
     width: 200px;
     text-align: center;
-    font-size: 30px;
     outline: none;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #67829b;
+    color: #e5e3e3;
+    border: #999999;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    font: small-caps 500 20px/1 sans-serif;
+
 } a:link {
     text-decoration: none;
 }
@@ -83,8 +84,14 @@
 .NotRealPhotoStorage {
     width: 100%;
     height: 350px;
+    background-color: #ffffff;
+    border-radius:0 0 15px 15px;
+
+
 }
 .Photos{
-    width: 100%;
-    height: 100%;
+    height: auto;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }

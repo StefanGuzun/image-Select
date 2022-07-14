@@ -9,17 +9,22 @@ const MainPage = () => {
     const togglePopup = () => {
         setIsOpen(!isOpen);
     }
-  return (
+
+    function realImg() {
+
+    }
+
+    return (
     <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
         <img className="Photos" src={APIComponent()} alt=""></img>
         </div>
-        <div className="Buttons">
-            <input type="button" className="Real"
+        <div className="ButtonPosition">
+            <input type="button" className="ButtonStyle"
                    value="Real" onClick={realImg}>
             </input>
-            <input type="button" className="NotReal"
+            <input type="button" className="ButtonStyle"
                    value="Not Real"
                    onClick={togglePopup}>
             </input>
