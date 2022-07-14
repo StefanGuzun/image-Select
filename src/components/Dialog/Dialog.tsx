@@ -1,11 +1,11 @@
-import { useState, useEffect, MouseEventHandler } from "react";
+import { useState, MouseEventHandler } from "react";
 import "./Dialog.css"
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
 
     const features = ["Background", "Eyes", "Nose", "Hair", "Mouth", "Ears", "Jewellery"];
 
-    const [reason, setReason] = useState(features);
+    const [reason] = useState(features);
     const [inputValue, setInputValue] = useState("");
 
     const inputHandler = (e:any) => {

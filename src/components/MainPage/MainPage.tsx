@@ -1,30 +1,19 @@
-import {useEffect, useState} from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import axios from "axios";
+import APIComponent from "../../API";
 
 const MainPage = () => {
-    const [images, setImages] = useState <any>([])
     const [isOpen, setIsOpen] = useState(false);
     const togglePopup = () => {
         setIsOpen(!isOpen);
     }
-    useEffect(() => {
-      axios.get("http://localhost:3000/api/v1/image")
-      .then(res => setImages(res.config.url))
-    }, [])
-    console.log(images)
-
-    const realImg = () => {
-      window.location.reload()
-    }
-
   return (
     <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
-        <img className="Photos" src={images} alt=""></img>
+        <img className="Photos" src={APIComponent()} alt=""></img>
         </div>
         <div className="Buttons">
             <input type="button" className="Real"
