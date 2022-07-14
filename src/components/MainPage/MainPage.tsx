@@ -15,6 +15,11 @@ const MainPage = () => {
       .then(res => setImages(res.config.url))
     }, [])
     console.log(images)
+
+    const realImg = () => {
+      window.location.reload()
+    }
+
   return (
     <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
@@ -23,7 +28,7 @@ const MainPage = () => {
         </div>
         <div className="Buttons">
             <input type="button" className="Real"
-                   value="Real">
+                   value="Real" onClick={realImg}>
             </input>
             <input type="button" className="NotReal"
                    value="Not Real"
