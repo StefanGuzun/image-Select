@@ -19,13 +19,13 @@ const MainPage = () => {
     <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
-        <img className="Photos" src={images} alt=""></img>
+        <img className="Photos" src={images} alt=""/>
         </div>
-        <div className="Buttons">
-            <input type="button" className="Real"
+        <div className="ButtonPosition">
+            <input type="button" className="ButtonStyle"
                    value="Real">
             </input>
-            <input type="button" className="NotReal"
+            <input type="button" className="ButtonStyle"
                    value="Not Real"
                    onClick={togglePopup}>
             </input>
