@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
 import APIComponent from "../../API";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 const MainPage = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,13 @@ const MainPage = () => {
     <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
-        <img className="Photos" src={APIComponent()} alt=""></img>
+        <TransformWrapper
+          initialScale={0.5}
+        >
+          <TransformComponent>
+            <img className="Photos" src={APIComponent()} alt=""></img>
+          </TransformComponent>
+          </TransformWrapper>
         </div>
         <div className="ButtonPosition">
             <input type="button" className="ButtonStyle"
