@@ -1,15 +1,23 @@
-import { useState } from "react"
+import React, { useState, MouseEventHandler, MouseEvent } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
 import APIComponent from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
-const MainPage = () => {
+const MainPage = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
+  const [removePhotoCard, setRemovePhotoCard] = useState(false)
+  // const [tag, setTags] = useState()
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
+  
+//   const handleRemoveClick = (event: MouseEvent<HTMLButtonElement>) => {
+//     const target = event.target as SVGPathElement
+//     const removingText = target.parentElement!.parentElement!.parentElement!.children.item(0)!.innerHTML
+//     setTags((prev: any[]) => (prev?.filter(tag => tag !== removingText)))
+// }
 
   const realImg = () => {
       window.location.reload()
@@ -18,13 +26,7 @@ const MainPage = () => {
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
-        <TransformWrapper
-          initialScale={1}
-        >
-          <TransformComponent>
             <img className="Photos" src={APIComponent()} alt=""></img>
-          </TransformComponent>
-          </TransformWrapper>
         </div>
         <div className="ButtonPosition">
             <input type="button" className="ButtonStyle" value="Real" onClick={realImg}/>
@@ -38,7 +40,18 @@ const MainPage = () => {
             </Link>
           </div>
           <div className="NotRealPhotoStorage">
-            #############
+          {removePhotoCard ? null : (
+            <div className="NotRealPhotosContainer">
+              <span className="photosCloseIcon" onClick={() => setRemovePhotoCard(true)} >x</span>
+              <img className="NotRealPhotos" src={APIComponent()} alt="" />
+              </div>
+          )}
+            <div className="NotRealPhotosContainer">
+              <span className="photosCloseIcon" onClick={props.handleClose}>x</span>
+              </div>
+            <div className="NotRealPhotosContainer">
+              <span className="photosCloseIcon" onClick={props.handleClose}>x</span>
+              </div>
           </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useState, MouseEventHandler } from "react";
+import React, { useState, MouseEventHandler } from "react";
 import "./Dialog.css"
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {

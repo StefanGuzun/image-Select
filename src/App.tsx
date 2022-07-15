@@ -8,7 +8,7 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<MainPage/>} />
+                    <Route path="/" element={<MainPage handleClose={undefined}/>} />
                     <Route path="/ReportPage" element={<ReportPage/>} />
                 </Routes>
             </BrowserRouter>
