@@ -1,6 +1,8 @@
 import { combineReducers } from "redux"
-import { realNotReal } from "./actions"
+import { imgReducer } from "./imgReducer"
 
 export const rootReducer = combineReducers({
-    app: realNotReal
+    image: imgReducer
 })
+
+export type RootState = ReturnType<typeof rootReducer>

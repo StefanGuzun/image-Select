@@ -4,8 +4,7 @@ import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
 import APIComponent from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
-import { useSelector, useDispatch } from "react-redux";
-import { real, notReal } from '../../redux/store'
+import { useSelector } from "react-redux";
 
 const MainPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +12,8 @@ const MainPage = () => {
     setIsOpen(!isOpen);
   }
 
-  const buttons = useSelector(state => state);
-  const dispatch = useDispatch<any>();
+  const state = useSelector((state: any) => state);
+console.log(state);
 
     return (
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
@@ -29,8 +28,8 @@ const MainPage = () => {
           </TransformWrapper>
         </div>
         <div className="ButtonPosition">
-            <input type="button" className="ButtonStyle" value="Real" onClick={dispatch(real)}/>
-            <input type="button" className="ButtonStyle" value="Not Real" onClick={() => dispatch(notReal)}/>
+            <input type="button" className="ButtonStyle" value="Real" />
+            <input type="button" className="ButtonStyle" value="Not Real"/>
         </div>
       </div>
       <div style={{height: "50%", width: "100%"}}>
