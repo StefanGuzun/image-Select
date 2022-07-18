@@ -4,6 +4,7 @@ import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
 import APIComponent from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+import { useSelector } from "react-redux";
 
 const MainPage = () => {
   const [isOpen, setIsOpen] = useState(false);
