@@ -19,11 +19,21 @@ const MainPage = () => {
   const realImg = () => {
       window.location.reload()
   }
+
+  const state = useSelector((state: any) => state);
+  console.log(state);
+
     return (
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
+        <TransformWrapper
+          initialScale={1}
+        >
+          <TransformComponent>
             <img className="Photos" src={APIComponent()} alt=""></img>
+          </TransformComponent>
+          </TransformWrapper>
         </div>
         <div className="ButtonPosition">
             <input type="button" className="ButtonStyle" value="Real" onClick={realImg}/>
