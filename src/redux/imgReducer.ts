@@ -1,4 +1,5 @@
 import { ImageAction, ImagesState, ImageActionTypes } from "./types"
+import APIComponent from "../API"
 const initialState : ImagesState = {
     images: [],
     loading: false,
@@ -10,7 +11,10 @@ export const imgReducer = (state = initialState, action: ImageAction): ImagesSta
         case ImageActionTypes.FETCH_PHOTOS:
             return {loading: true, error: null, images: []}
         case ImageActionTypes.FETCH_PHOTOS_SUCCESS:
-            return {loading: false, error: null, images: action.payload}
+            return {
+                ...state,
+                loading: false , error: null,
+            }
         case ImageActionTypes.FETCH_PHOTOS_FAIL:
             return {loading: false, error: action.payload, images: []}
         default: return state

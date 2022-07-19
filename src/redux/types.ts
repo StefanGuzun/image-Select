@@ -1,3 +1,5 @@
+import APIComponent from "../API"
+
 export interface ImagesState {
     images: any[],
     loading: boolean,
@@ -11,6 +13,7 @@ export enum ImageActionTypes {
 }
 
 interface FetchImageAction {
+    payload: any[]
     type: ImageActionTypes.FETCH_PHOTOS
 }
 
