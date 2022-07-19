@@ -1,12 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import APIComponent from "../../API";
+import getImage from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { useSelector } from "react-redux";
 
 const MainPage = () => {
+  const [image, setImage] = useState<any>()
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -20,10 +21,14 @@ const MainPage = () => {
   const realImg = () => {
       window.location.reload()
   }
-
+  console.log(image);
+  
   const state = useSelector((state: any) => state);
-  console.log(state);
+  console.log("state: ", state.image.images);
 
+  useEffect(() => {
+    getImage().then(item => setImage(item))
+    }, [])
     return (
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
@@ -32,7 +37,7 @@ const MainPage = () => {
           initialScale={1}
         >
           <TransformComponent>
-            <img className="Photos" src={APIComponent()} alt=""></img>
+            <img className="Photos" src={image} alt=""></img>
           </TransformComponent>
           </TransformWrapper>
         </div>
@@ -49,12 +54,15 @@ const MainPage = () => {
           </div>
           <div className="NotRealPhotoStorage">
             <div className="NotRealPhotosContainer">
+            <img className="Photos" src={image} alt=""></img>
               <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
               </div>
             <div className="NotRealPhotosContainer">
+            <img className="Photos" src={image} alt=""></img>
             <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
               </div>
             <div className="NotRealPhotosContainer">
+            <img className="Photos" src={image}  alt=""></img>
               <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
               </div>
           </div>
