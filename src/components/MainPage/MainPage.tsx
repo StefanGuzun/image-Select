@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import getImage from "../../API";
+import { getImage } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 const MainPage = () => {
@@ -20,7 +20,6 @@ const MainPage = () => {
   const realImg = () => {
       window.location.reload()
   }
-  console.log(image);
 
   useEffect(() => {
     getImage().then(item => setImage(item))

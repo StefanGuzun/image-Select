@@ -1,10 +1,12 @@
-import { useState, MouseEventHandler } from "react";
+import { useState, useEffect, MouseEventHandler } from "react";
 import "./Dialog.css"
+import { postImages } from "../../API";
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
     const features = ["Background", "Eyes", "Nose", "Hair", "Mouth", "Ears", "Jewellery"];
     const [reason] = useState(features);
     const [inputValue, setInputValue] = useState("");
+    const [image, setImage] = useState<any>()
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
     }
@@ -12,7 +14,12 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
         reason.push(inputValue)
         console.log(reason);
         console.log('inputValue :>> ', inputValue);
+        
     }
+
+    useEffect(() => {
+        postImages().then(item => setImage(item))
+    }, [])
 
     console.log('inputValue :>> ', inputValue);
     console.log('reason :>> ', reason);
@@ -35,7 +42,7 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <button className="buttonStyle" onClick={props.handleClose}>
                     Cancel
                 </button>
-                <button className="buttonStyle" onClick={handleSubmit}>
+                <button className="buttonStyle" onClick={image}>
                     Ok
                 </button>
             </div>
