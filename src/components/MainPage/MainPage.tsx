@@ -4,7 +4,6 @@ import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
 import getImage from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
-import { useSelector } from "react-redux";
 
 const MainPage = () => {
   const [image, setImage] = useState<any>()
@@ -22,9 +21,6 @@ const MainPage = () => {
       window.location.reload()
   }
   console.log(image);
-  
-  const state = useSelector((state: any) => state);
-  console.log("state: ", state.image.images);
 
   useEffect(() => {
     getImage().then(item => setImage(item))
