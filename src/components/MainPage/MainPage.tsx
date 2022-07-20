@@ -4,14 +4,15 @@ import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
 import { getImages, getReports } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
-import AddImage from "../AddImage/AddImage";
+import { AddImage } from "../AddImage/AddImage";
 
 export let img: string
 
-const MainPage = () => {
-  const [image, setImage] = useState<any>()
-  const [isOpen, setIsOpen] = useState(false);
+const MainPage: React.FC = () => {
+  const [image, setImage] = useState<string>("")
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [reports, setReports] = useState([])
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
@@ -21,14 +22,14 @@ const MainPage = () => {
   }
 
   useEffect(() => {
-    getImages().then(item => setImage(item))
-    }, [])
-  useEffect(()=>{
+      getImages().then(item => setImage(item))
     getReports()
         .then((report: React.SetStateAction<never[]>)=>setReports(report))
-  }, [])
+    }, [])
 
-
+    reports.map((item: any) => {
+      console.log(item.src)
+    })
     img = image
 
     return (
@@ -55,8 +56,8 @@ const MainPage = () => {
             </Link>
           </div>
           <div className="NotRealPhotoStorage">
-            {reports.map((report: any) => {
-              return(<AddImage image={report.src} id={report.id}/>)
+            {reports.map((img: any) => {
+              return(<AddImage image={img.src} />)
             })}
           </div>
       </div>

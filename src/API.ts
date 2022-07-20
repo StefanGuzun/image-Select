@@ -7,10 +7,6 @@ export const getImages = async () => {
         .catch((err) => err);
 }
 
-export const postImages = async (response: any) => {
-    await axios.post("http://localhost:8000/images", response);
-}
-
 export const getReason = async () => {
     return await fetch("http://localhost:8000/reasons")
         .then((reason) => reason.json())

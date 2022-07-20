@@ -2,7 +2,7 @@ import {img} from "../MainPage/MainPage";
 import "../MainPage/MainPage.css"
 
 
-const getImage = (props: any) => {
+export const AddImage = (props: any) => {
     const PhotoRemove = (e: any) => {
         const deleteButton = e.target.parentNode
         deleteButton.remove(deleteButton)
@@ -14,4 +14,4 @@ const getImage = (props: any) => {
             </div>
 )
 }
-export default getImage
+
