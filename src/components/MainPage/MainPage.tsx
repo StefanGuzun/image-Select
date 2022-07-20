@@ -5,6 +5,8 @@ import Dialog from "../Dialog/Dialog";
 import { getImage } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
+export let img: string 
+
 const MainPage = () => {
   const [image, setImage] = useState<any>()
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +26,9 @@ const MainPage = () => {
   useEffect(() => {
     getImage().then(item => setImage(item))
     }, [])
+
+    img = image
+
     return (
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">

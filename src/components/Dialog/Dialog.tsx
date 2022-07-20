@@ -1,28 +1,25 @@
 import { useState, useEffect, MouseEventHandler } from "react";
 import "./Dialog.css"
 import { postImages } from "../../API";
+import { img } from "../MainPage/MainPage";
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
     const features = ["Background", "Eyes", "Nose", "Hair", "Mouth", "Ears", "Jewellery"];
     const [reason] = useState(features);
     const [inputValue, setInputValue] = useState("");
-    const [image, setImage] = useState<any>()
+    const [postImage, setPostImage] = useState<any>()
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
     }
     const handleSubmit = () => {
         reason.push(inputValue)
-        console.log(reason);
+        console.log('reason :>> ', reason);
         console.log('inputValue :>> ', inputValue);
-        
     }
 
     useEffect(() => {
-        postImages().then(item => setImage(item))
+        postImages("src").then(item => setPostImage(item))
     }, [])
-
-    console.log('inputValue :>> ', inputValue);
-    console.log('reason :>> ', reason);
 
     return (
         <div className="pop-Up">
@@ -42,7 +39,7 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <button className="buttonStyle" onClick={props.handleClose}>
                     Cancel
                 </button>
-                <button className="buttonStyle" onClick={image}>
+                <button className="buttonStyle" onClick={postImage}>
                     Ok
                 </button>
             </div>
