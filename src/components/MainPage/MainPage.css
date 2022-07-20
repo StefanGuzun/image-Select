@@ -81,6 +81,7 @@
     border-radius:0 0 15px 15px;
     border-top: 1.5px solid #cfd3d6;
     overflow-y: scroll;
+    flex-wrap: wrap;
 }
 
 .Photos{
