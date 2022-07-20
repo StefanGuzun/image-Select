@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import { getImage } from "../../API";
+import { getReports } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 export let img: string 
@@ -24,7 +24,7 @@ const MainPage = () => {
   }
 
   useEffect(() => {
-    getImage().then(item => setImage(item))
+    getReports().then(item => setImage(item))
     }, [])
 
     img = image
