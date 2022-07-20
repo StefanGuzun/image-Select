@@ -1,49 +1,57 @@
 {
-    "Images":[
-        {
-            "url": "",
-            "id": 1
-        }
-    ],
-    "reasons":[
-            {
-                "reason": "Background",
-                "id": 1
-            },
-            {
-                "reason": "Eyes",
-                "id": 2
-            },
-            {
-                "reason": "Nose",
-                "id": 3
-            },
-            {
-                "reason": "Hair",
-                "id": 4
-            },
-            {
-                "reason": "Mouth",
-                "id": 5
-            },
-            {
-                "reason": "Ears",
-                "id": 6
-            },
-            {
-                "reason": "Jewellery",
-                "id": 7
-            }
-    ],
-    "Why":[
-        {
-            "Background": "",
-            "Eyes": "",
-            "Nose": "",
-            "Hair": "",
-            "Mouth": "",
-            "Ears": "",
-            "Jewwelery": ""
-        }
-    ]
+  "reports": [
+    {
+      "src": "",
+      "id": 1
+    },
+    {
+      "src": "",
+      "id": 2
+    },
+    {
+      "src": "",
+      "id": 3
+    }
+  ],
+  "reasons": [
+    {
+      "reason": "Background",
+      "id": 1
+    },
+    {
+      "reason": "Eyes",
+      "id": 2
+    },
+    {
+      "reason": "Nose",
+      "id": 3
+    },
+    {
+      "reason": "Hair",
+      "id": 4
+    },
+    {
+      "reason": "Mouth",
+      "id": 5
+    },
+    {
+      "reason": "Ears",
+      "id": 6
+    },
+    {
+      "reason": "Jewellery",
+      "id": 7
+    }
+  ],
+  "Why": [
+    {
+      "Background": "",
+      "Eyes": "",
+      "Nose": "",
+      "Hair": "",
+      "Mouth": "",
+      "Ears": "",
+      "Jewellery": ""
+    }
+  ]
 }

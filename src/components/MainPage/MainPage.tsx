@@ -2,22 +2,25 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import { getImage } from "../../API";
+import { getImage, getReports } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+import AddImage from "../AddImage/AddImage";
 
-export let img: string 
+export let img: string
 
 const MainPage = () => {
   const [image, setImage] = useState<any>()
   const [isOpen, setIsOpen] = useState(false);
+  const [reports, setReports] = useState([])
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
-  
-  const PhotoRemove = (e: any) => {
+
+    const PhotoRemove = (e: any) => {
     const deleteButton = e.target.parentNode
     deleteButton.remove(deleteButton)
   }
+
 
   const realImg = () => {
       window.location.reload()
@@ -26,6 +29,11 @@ const MainPage = () => {
   useEffect(() => {
     getImage().then(item => setImage(item))
     }, [])
+  useEffect(()=>{
+    getReports()
+        .then((report: React.SetStateAction<never[]>)=>setReports(report))
+  }, [])
+
 
     img = image
 
@@ -53,18 +61,9 @@ const MainPage = () => {
             </Link>
           </div>
           <div className="NotRealPhotoStorage">
-            <div className="NotRealPhotosContainer">
-              <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              <img className="Photos" src={image} alt=""></img>
-            </div>
-            <div className="NotRealPhotosContainer">
-              <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              <img className="Photos" src={image} alt=""></img>
-            </div>
-            <div className="NotRealPhotosContainer">
-              <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              <img className="Photos" src={image}  alt=""></img>
-            </div>
+            {reports.map((report: any) => {
+              return(<AddImage image={report.src} id={report.id}/>)
+            })}
           </div>
       </div>
     </div>
