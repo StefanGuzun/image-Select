@@ -92,10 +92,11 @@
 
 
 .photosCloseIcon {
+    position: absolute;
     display: flex;
     justify-content: center;
-    margin-top: -7px;
     margin-left: 145px;
+    margin-top: -7px;
     cursor: pointer;
     background: #67829b;
     color: white;
@@ -104,6 +105,7 @@
     border-radius: 50%;
     font-size: x-large;
     opacity: 0;
+    z-index: 1;
 }
 
 .NotRealPhotosContainer {

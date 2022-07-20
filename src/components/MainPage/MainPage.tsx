@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import getImage from "../../API";
+import { getImage } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 const MainPage = () => {
@@ -20,11 +20,11 @@ const MainPage = () => {
   const realImg = () => {
       window.location.reload()
   }
-  console.log(image);
+  // console.log(image);
 
   useEffect(() => {
     getImage().then(item => setImage(item))
-    }, [])
+    }, [])    
     return (
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
@@ -50,17 +50,17 @@ const MainPage = () => {
           </div>
           <div className="NotRealPhotoStorage">
             <div className="NotRealPhotosContainer">
-            <img className="Photos" src={image} alt=""></img>
               <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              </div>
+              <img className="Photos" src={image} alt=""></img>
+            </div>
             <div className="NotRealPhotosContainer">
-            <img className="Photos" src={image} alt=""></img>
-            <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              </div>
-            <div className="NotRealPhotosContainer">
-            <img className="Photos" src={image}  alt=""></img>
               <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              </div>
+              <img className="Photos" src={image} alt=""></img>
+            </div>
+            <div className="NotRealPhotosContainer">
+              <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
+              <img className="Photos" src={image}  alt=""></img>
+            </div>
           </div>
       </div>
     </div>
