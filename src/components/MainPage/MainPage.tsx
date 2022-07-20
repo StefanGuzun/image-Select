@@ -54,17 +54,17 @@ const MainPage = () => {
           </div>
           <div className="NotRealPhotoStorage">
             <div className="NotRealPhotosContainer">
-            <img className="Photos" src={image} alt=""></img>
               <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              </div>
+              <img className="Photos" src={image} alt=""></img>
+            </div>
             <div className="NotRealPhotosContainer">
-            <img className="Photos" src={image} alt=""></img>
-            <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              </div>
-            <div className="NotRealPhotosContainer">
-            <img className="Photos" src={image}  alt=""></img>
               <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-              </div>
+              <img className="Photos" src={image} alt=""></img>
+            </div>
+            <div className="NotRealPhotosContainer">
+              <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
+              <img className="Photos" src={image}  alt=""></img>
+            </div>
           </div>
       </div>
     </div>

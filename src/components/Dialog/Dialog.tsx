@@ -1,25 +1,34 @@
-import { useState, useEffect, MouseEventHandler } from "react";
+import { useState, MouseEventHandler, useEffect } from "react";
+import { isTemplateSpan } from "typescript";
+import { getReason } from "../../API";
 import "./Dialog.css"
 import { postImages } from "../../API";
 import { img } from "../MainPage/MainPage";
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
-    const features = ["Background", "Eyes", "Nose", "Hair", "Mouth", "Ears", "Jewellery"];
-    const [reason] = useState(features);
+    const [reasons, setReasons] = useState<any>([]);
     const [inputValue, setInputValue] = useState("");
     const [postImage, setPostImage] = useState<any>()
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
     }
     const handleSubmit = () => {
-        reason.push(inputValue)
-        console.log('reason :>> ', reason);
+        // reason.push(inputValue)
+        // console.log(reason)
         console.log('inputValue :>> ', inputValue);
     }
-
+    useEffect(() => {
+        getReason()
+        .then(item => setReasons(item))
+        .catch(err => console.log(err))
+    }, [])
+    console.log("reasons: ", reasons);
     useEffect(() => {
         postImages("src").then(item => setPostImage(item))
     }, [])
+    
+    // console.log('inputValue :>> ', inputValue);
+    // console.log('reason :>> ', reason);
 
     return (
         <div className="pop-Up">
@@ -27,7 +36,7 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <div style={{color:"#e3e1e2"}}>Choose features
                     <ul className="featuresContainer">
                         {
-                            features.map((feature) => <li style={{listStyleType:"none"}}><div style={{display:"flex", alignItems:"center"}}><input type="checkbox" style={{height:"25px", width:"25px"}}/>{feature}</div></li>)
+                            reasons.map((item: any) => <li style={{listStyleType:"none"}}><div style={{display:"flex", alignItems:"center"}}><input type="checkbox" style={{height:"25px",width:"25px"}}/>{item.reason}</div></li>)
                         }
                     </ul>
                 </div>

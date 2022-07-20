@@ -1,4 +1,3 @@
-import axios from "axios";
 
 export const getImage = async () => {
     return await fetch("http://localhost:3000/api/v1/image")
@@ -10,3 +9,9 @@ export const getImage = async () => {
 export const postImages = async (response: any) => { 
     await axios.post("http://localhost:8000/images", response); 
 }
+
+export const getReason = async () => {
+    return await fetch("http://localhost:8000/reasons")
+        .then((reason) => reason.json())
+        .catch(err => console.log(err))
+        }
