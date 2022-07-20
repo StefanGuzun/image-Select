@@ -1,8 +1,7 @@
 import { useState, MouseEventHandler, useEffect } from "react";
-import { isTemplateSpan } from "typescript";
 import { getReason } from "../../API";
 import "./Dialog.css"
-import { postImages } from "../../API";
+import { postReports } from "../../API";
 import { img } from "../MainPage/MainPage";
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
@@ -17,18 +16,17 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
         // console.log(reason)
         console.log('inputValue :>> ', inputValue);
     }
+
     useEffect(() => {
         getReason()
         .then(item => setReasons(item))
         .catch(err => console.log(err))
     }, [])
     console.log("reasons: ", reasons);
+
     useEffect(() => {
-        postImages("src").then(item => setPostImage(item))
+        postReports({"src": img})
     }, [])
-    
-    // console.log('inputValue :>> ', inputValue);
-    // console.log('reason :>> ', reason);
 
     return (
         <div className="pop-Up">
