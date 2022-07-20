@@ -2,10 +2,13 @@ import { useState, MouseEventHandler, useEffect } from "react";
 import { isTemplateSpan } from "typescript";
 import { getReason } from "../../API";
 import "./Dialog.css"
+import { postImages } from "../../API";
+import { img } from "../MainPage/MainPage";
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
     const [reasons, setReasons] = useState<any>([]);
     const [inputValue, setInputValue] = useState("");
+    const [postImage, setPostImage] = useState<any>()
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
     }
@@ -20,7 +23,10 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
         .catch(err => console.log(err))
     }, [])
     console.log("reasons: ", reasons);
-
+    useEffect(() => {
+        postImages("src").then(item => setPostImage(item))
+    }, [])
+    
     // console.log('inputValue :>> ', inputValue);
     // console.log('reason :>> ', reason);
 
@@ -42,7 +48,7 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <button className="buttonStyle" onClick={props.handleClose}>
                     Cancel
                 </button>
-                <button className="buttonStyle" onClick={handleSubmit}>
+                <button className="buttonStyle" onClick={postImage}>
                     Ok
                 </button>
             </div>
