@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import { getImage, getReports } from "../../API";
+import { getImages, getReports } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import AddImage from "../AddImage/AddImage";
 
@@ -16,18 +16,12 @@ const MainPage = () => {
     setIsOpen(!isOpen);
   }
 
-    const PhotoRemove = (e: any) => {
-    const deleteButton = e.target.parentNode
-    deleteButton.remove(deleteButton)
-  }
-
-
   const realImg = () => {
       window.location.reload()
   }
 
   useEffect(() => {
-    getImage().then(item => setImage(item))
+    getImages().then(item => setImage(item))
     }, [])
   useEffect(()=>{
     getReports()

@@ -5,12 +5,33 @@
       "id": 1
     },
     {
+<<<<<<< HEAD
       "src": "",
       "id": 2
     },
     {
       "src": "",
       "id": 3
+=======
+      "src": "blob:http://localhost:3001/0d0733f8-303c-47ab-b5d5-0ff3ed49a320",
+      "id": 2
+    },
+    {
+      "src": "blob:http://localhost:3001/0d0733f8-303c-47ab-b5d5-0ff3ed49a320",
+      "id": 3
+    },
+    {
+      "src": "blob:http://localhost:3001/0d0733f8-303c-47ab-b5d5-0ff3ed49a320",
+      "id": 4
+    },
+    {
+      "src": "blob:http://localhost:3001/0d0733f8-303c-47ab-b5d5-0ff3ed49a320",
+      "id": 5
+    },
+    {
+      "src": "blob:http://localhost:3001/0d0733f8-303c-47ab-b5d5-0ff3ed49a320",
+      "id": 6
+>>>>>>> b6860b94e9ea28d500af3141bc4f9d38e0f06481
     }
   ],
   "reasons": [
@@ -51,7 +72,14 @@
       "Hair": "",
       "Mouth": "",
       "Ears": "",
+<<<<<<< HEAD
       "Jewellery": ""
     }
   ]
 }
+=======
+      "Jewwelery": ""
+    }
+  ]
+}
+>>>>>>> b6860b94e9ea28d500af3141bc4f9d38e0f06481
