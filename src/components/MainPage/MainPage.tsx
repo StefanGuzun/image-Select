@@ -30,6 +30,7 @@ const MainPage: React.FC = () => {
     reports.map((item: any) => {
       console.log(item.src)
     })
+    
     img = image
 
     return (

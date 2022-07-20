@@ -1,29 +1,6 @@
 {
   "reports": [
-    {
-      "src": "blob:http://localhost:3001/634cf0ce-da54-4c71-bba3-bc34adde8efc",
-      "id": 1
-    },
-    {
-      "src": "blob:http://localhost:3001/4d1732b8-3118-45e2-9d80-a29c71e0ed49",
-      "id": 2
-    },
-    {
-      "src": "blob:http://localhost:3001/3e985eeb-cec4-43c8-8c9d-08499d5ea332",
-      "id": 3
-    },
-    {
-      "src": "blob:http://localhost:3001/e9cc5025-a2d0-400a-9486-6d5c71917e34",
-      "id": 4
-    },
-    {
-      "src": "blob:http://localhost:3001/565330da-da64-4f32-9e53-4a8cb066fa20",
-      "id": 5
-    },
-    {
-      "src": "blob:http://localhost:3001/565330da-da64-4f32-9e53-4a8cb066fa20",
-      "id": 6
-    }
+
   ],
   "reasons": [
     {

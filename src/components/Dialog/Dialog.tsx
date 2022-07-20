@@ -7,7 +7,6 @@ import { img } from "../MainPage/MainPage";
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
     const [reasons, setReasons] = useState<any>([]);
     const [inputValue, setInputValue] = useState("");
-    const [postImage, setPostImage] = useState<any>()
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
     }
@@ -24,9 +23,12 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
     }, [])
     console.log("reasons: ", reasons);
 
-    useEffect(() => {
+
+
+    const sendImage = () => {
         postReports({"src": img})
-    }, [])
+    }
+
 
     return (
         <div className="pop-Up">
@@ -46,11 +48,12 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <button className="buttonStyle" onClick={props.handleClose}>
                     Cancel
                 </button>
-                <button className="buttonStyle" onClick={postImage}>
+                <button className="buttonStyle" onClick={sendImage}>
                     Ok
                 </button>
             </div>
         </div>
     )
 }
+
 export default Dialog
