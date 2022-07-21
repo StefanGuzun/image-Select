@@ -85,14 +85,6 @@
     flex-wrap: wrap;
 }
 
-.Photos{
-    height: 100%;
-    width: 100%;
-    border-radius: 15px;
-}
-
-
-
 .photosCloseIcon {
     position: absolute;
     display: flex;
@@ -120,13 +112,3 @@
     opacity: 1;
 }
 
-.XFrame {
-    position: relative;
-    height: auto;
-}
-
-.NotRealPhotos {
-    height: 100%;
-    width: 100%;
-    
-}

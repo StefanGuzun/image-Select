@@ -11,7 +11,7 @@ export const AddImage = (props: any) => {
     return (
             <div className="NotRealPhotosContainer">
                 <span className="photosCloseIcon" onClick={PhotoRemove}>x</span>
-                <img className="Photos" src={props.image} alt=""></img>
+                <img style={{height: "100%", width: "100%", borderRadius: "15px"}} src={props.image} alt=""></img>
             </div>
 )
 }
