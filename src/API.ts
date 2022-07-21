@@ -28,7 +28,7 @@ export const postReason = async (reason: any) => {
     await axios.post("http://localhost:8000/reasons", reason);
 }
 
-export const deleteReports = async (id: any) => {
+export const deleteReports = async (id: number) => {
     await axios.delete(`http://localhost:8000/reports/${id}`);
 }
 
