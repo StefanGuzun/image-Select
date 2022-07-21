@@ -32,5 +32,3 @@ export const deleteReports = async (id: any) => {
     await axios.delete(`http://localhost:8000/reports/${id}`);
 }
 
-
-
