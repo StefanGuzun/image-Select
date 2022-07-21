@@ -11,6 +11,8 @@ export let img: string
 
 export let id: number
 
+export let list: string
+
 const MainPage: React.FC = () => {
   const [image, setImage] = useState<string>("")
   const [isOpen, setIsOpen] = useState<boolean>(false);
