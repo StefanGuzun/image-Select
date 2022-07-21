@@ -1,12 +1,14 @@
 import { useState, MouseEventHandler, useEffect } from "react";
-import { getReason } from "../../API";
+import { getReason, postReason } from "../../API";
 import "./Dialog.css"
 import { postReports } from "../../API";
-import { img } from "../MainPage/MainPage";
+import { img, list } from "../MainPage/MainPage";
 
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
     const [reasons, setReasons] = useState<any>([]);
     const [inputValue, setInputValue] = useState("");
+
+
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
     }
@@ -20,6 +22,10 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
     const sendImage = () => {
         postReports({"src": img})
         window.location.reload() 
+    }
+    
+    const sendOther = () => {
+        postReason({"reason": inputValue})
     }
 
     return (
@@ -40,12 +46,12 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <button className="buttonStyle" onClick={props.handleClose}>
                     Cancel
                 </button>
+                <div className="divButtonStyle" onClick={() => {sendOther()}}>
                 <div onClick={props.handleClose} className="divButtonStyle">
-                <button className="buttonStyle" onClick={() => {
-                    sendImage()
-                }}>
+                <button className="buttonStyle" onClick={() => {sendImage()}}>
                     Ok
                 </button>
+                </div>
                 </div>
             </div>
         </div>
