@@ -40,13 +40,21 @@
 
 .buttonStyle{
     height: 50px;
-    width: 40%;
+    width: 80%;
     border:none ;
-    margin: 5px 0;
+    margin:  5px 0 0 30px;
     cursor: pointer;
-    background-color: #ffffff;
     color: #66819b;
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
     font: small-caps 500 20px/1 sans-serif;
+}
+.divButtonStyle{
+    height: 50px;
+    width: 100%;
+    border:none ;
+    cursor: pointer;
+    background-color: none;
+    color: #66819b;
+    border-radius: 10px;
 }
