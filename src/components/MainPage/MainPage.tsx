@@ -5,13 +5,11 @@ import Dialog from "../Dialog/Dialog";
 import { getImages, getReports } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { AddImage } from "../AddImage/AddImage";
-import { deleteReports } from "../../API"
+import { report } from "process";
 
 export let img: string
 
-export let deleteImage = (target: any) => {
-  deleteReports(target.id)
-}
+export let id: number
 
 const MainPage: React.FC = () => {
   const [image, setImage] = useState<string>("")
@@ -33,10 +31,6 @@ const MainPage: React.FC = () => {
     }, [])
 
     img = image
-
-    // const deleteImage = (target: any) => {
-    //   deleteReports(target.id)
-    // }
 
     return (
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
@@ -63,7 +57,7 @@ const MainPage: React.FC = () => {
           </div>
           <div className="NotRealPhotoStorage">
             {reports.map((img: any) => {
-              return(<AddImage image={img.src} />)
+              return(<AddImage image={img.src} id={img.id}/>)
             })}
           </div>
       </div>

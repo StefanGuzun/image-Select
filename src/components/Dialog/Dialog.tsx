@@ -26,7 +26,7 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
 
     const sendImage = () => {
         postReports({"src": img})
-        
+        window.location.reload() 
     }
 
     return (
