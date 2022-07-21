@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./MainPage.css"
 import Dialog from "../Dialog/Dialog";
-import { getImages, getReports } from "../../API";
+import { getImages, getReports, deleteReports } from "../../API";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { AddImage } from "../AddImage/AddImage";
 import { report } from "process";
@@ -36,11 +36,9 @@ const MainPage: React.FC = () => {
       <div className="MainContainer">{isOpen && <Dialog handleClose={togglePopup}/>}
       <div className="UpperContainer">
         <div className="PhotosContainer">
-        <TransformWrapper
-          initialScale={1}
-        >
+        <TransformWrapper initialScale={1}>
           <TransformComponent>
-            <img className="Photos" src={image} alt=""></img>
+            <img style={{height: "100%", width: "100%", borderRadius: "15px"}} src={image} alt=""></img>
           </TransformComponent>
           </TransformWrapper>
         </div>
@@ -59,6 +57,7 @@ const MainPage: React.FC = () => {
             {reports.map((img: any) => {
               return(<AddImage image={img.src} id={img.id}/>)
             })}
+
           </div>
       </div>
     </div>

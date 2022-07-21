@@ -7,14 +7,8 @@ import { img } from "../MainPage/MainPage";
 const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undefined; }) => {
     const [reasons, setReasons] = useState<any>([]);
     const [inputValue, setInputValue] = useState("");
-    // const [popupIsOpen, setIsOpen] = useState();
     const inputHandler = (e:any) => {
         setInputValue(e.target.value)
-    }
-    const handleSubmit = () => {
-        // reason.push(inputValue)
-        // console.log(reason)
-        console.log('inputValue :>> ', inputValue);
     }
 
     useEffect(() => {
@@ -22,7 +16,6 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
         .then(item => setReasons(item))
         .catch(err => console.log(err))
     }, [])
-    console.log("reasons: ", reasons);
 
     const sendImage = () => {
         postReports({"src": img})
@@ -50,7 +43,6 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
                 <div onClick={props.handleClose} className="divButtonStyle">
                 <button className="buttonStyle" onClick={() => {
                     sendImage()
-                    handleSubmit()
                 }}>
                     Ok
                 </button>
