@@ -1,9 +1,19 @@
 .ReportPage{
     border:  1.5px solid #cfd3d6;
-    height: 1000px;
+    height: 820px;
     width: 650px;
     background-color: white;
-    color: #43464b;
+    overflow-y: hidden;
+}
+
+.Header {
+    width: 650px;
+    height: 70px;
+    border-bottom: 1.5px solid #cfd3d6;
+    position: fixed;
+    background-color: white;
+    padding-bottom: 10px;
+    
 }
 
 .UnrealImages {
