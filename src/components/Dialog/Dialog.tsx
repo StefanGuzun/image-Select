@@ -24,8 +24,10 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
         window.location.reload() 
     }
     
-    const sendOther = () => {
-        postReason({"reason": inputValue})
+    let sendOther = () => {
+        if(!(inputValue.trim() == "")) {
+            postReason({"reason": inputValue})
+        }
     }
 
     return (

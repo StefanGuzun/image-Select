@@ -1,14 +1,5 @@
 {
-  "reports": [
-    {
-      "src": "blob:http://localhost:3001/50b4e0ae-b545-4668-94d3-5a966c68694c",
-      "id": 1
-    },
-    {
-      "src": "blob:http://localhost:3001/5948bee7-12a9-413d-b617-7649c34a7c79",
-      "id": 2
-    }
-  ],
+  "reports": [],
   "reasons": [
     {
       "reason": "Background",
