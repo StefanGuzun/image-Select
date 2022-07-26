@@ -25,9 +25,7 @@ const Dialog = (props: { handleClose: MouseEventHandler<HTMLSpanElement> | undef
     }
     
     let sendOther = () => {
-        if(inputValue.trim() == "") {
-            return
-        } else {
+        if(!(inputValue.trim() == "")) {
             postReason({"reason": inputValue})
         }
     }
